@@ -5,34 +5,50 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TicTacToe</title>
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="style.css">
     <script src="main.js" defer></script>
-<!-- since js is written at bottom to load after css but using defer fn it will allow js to load after loading html and css file.-->
+</head>
+<body> 
+    
+</body>
+</html>
+
 </head>
 
 <body>
-    <div class="gameContainer">
-        <div class="grid">
-            <div class="box"><span class="boxText"></span></div>
-            <div class="box"><span class="boxText"></span></div>
-            <div class="box"><span class="boxText"></span></div>
-            <div class="box"><span class="boxText"></span></div>
-            <div class="box"><span class="boxText"></span></div>
-            <div class="box"><span class="boxText"></span></div>
-            <div class="box"><span class="boxText"></span></div>
-            <div class="box"><span class="boxText"></span></div>
-            <div class="box"><span class="boxText"></span></div>
-        </div>
-        <div class="info">
-            <h1>Welcome to TicTacToe!</h1>
-            <span><div class="turnInfo">
-                It's the turn of player</div></span><span><div class="player">X</div></span>
-            
-            <div id="result">Game is in progress</div>
-            <div class="imgBox">
-                <img src="" alt="">
+    <center>
+        <br>
+        <span class="heading"><h1>Welcome to TicTacToe !!</h1></span>
+    </center>
+    
+    <div class="plate">
+        <div class="container">
+            <div class="BOX">
+                <div class="gameContainer">
+                    <div class="grid">
+                        <div class="box"><span class="boxText"></span></div>
+                        <div class="box"><span class="boxText"></span></div>
+                        <div class="box"><span class="boxText"></span></div>
+                        <div class="box"><span class="boxText"></span></div>
+                        <div class="box"><span class="boxText"></span></div>
+                        <div class="box"><span class="boxText"></span></div>
+                        <div class="box"><span class="boxText"></span></div>
+                        <div class="box"><span class="boxText"></span></div>
+                        <div class="box"><span class="boxText"></span></div>
+                    </div>
+                    <div class="info">
+                    <!-- <h1><u>Tic-Tac-Toe Arena</u></h1>-->
+                    
+                        <span><div class="turnInfo">
+                            It's the turn of player</div></span><span><div class="player">X</div></span>
+                        
+                        <div id="result">Game is in progress</div>
+                        <br>
+                        <br>
+                        <button class="reset">StartAgain</button>
+                    </div>
+                </div>
             </div>
-            <button class="reset">StartAgain</button>
         </div>
     </div>
 </body>
