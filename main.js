@@ -5,7 +5,7 @@ let count = 0;
 const changePlayer = () => {
     return player === "X" ? "0" : "X";
 };
-
+  
 const checkWon = () => {
     let boxTexts = document.getElementsByClassName("boxText");
     let winPos = [
@@ -25,11 +25,10 @@ const checkWon = () => {
               boxTexts[ele[0]].innerText !== ""){
                 document.getElementById("result").innerText = "Player " +
                    boxTexts[ele[0]].innerText + " Won !!" ;
-                 //  console.log("hi " + boxTexts[ele[0]].innerText);
+                   count=0;
                    document.getElementsByClassName("turnInfo")[0].innerText = "Congratulations player ";
                    document.getElementsByClassName("player")[0].innerText ="" + boxTexts[ele[1]].innerText;
                    gameOver = true;
-                   count=0;//
               }
     })
 };
@@ -50,7 +49,7 @@ Array.from(boxes).forEach((box) => { //converting the objects fetched into a rea
             }
            // console.log(count);
            if(!gameOver && count===9){
-            document.getElementById("result").innerText = "Match Draw, No one Wins !!";
+            document.getElementById("result").innerText = "Match Draw !!";
             document.getElementsByClassName("turnInfo")[0].innerText = "";
             document.getElementsByClassName("player")[0].innerText = "";
             count = 0;
@@ -68,15 +67,19 @@ reset.addEventListener("click", () =>{
     
     document.getElementById("result").innerText = "Game is in progress";
     player = "X";
+    count = 0; //here
     document.getElementsByClassName("turnInfo")[0].innerText = "It's the turn of player ";
     document.getElementsByClassName("player")[0].innerText = player;
-    count=0;//
     gameOver= false;
 }); 
 
-
-
-
+function addComments(id){
+    var addEventName = id.value +'<br>';
+    var a = document.getElementById('userComments');
+    document.getElementById('addEventNames').innerHTML = '<p>'+addEventName+'</p>'
+        +document.getElementById('addEventNames').innerHTML;          
+    a.value=a.defaultValue;
+}
 
 
 
